@@ -10,6 +10,29 @@ This project implements both **Convolutional Neural Networks (CNNs)** for image 
 
 Implemented in: `cnn.py`, `cnn_layers.py`, `layers.py`
 
+### 🧠 CNN: Training Loss & Accuracy
+
+This figure shows the CNN model’s learning progress. The **left** plot illustrates how the training loss decreases over iterations, and the **right** plot shows training and validation accuracy across epochs.
+
+![CNN Training Performance](./Images/cnn.png)
+
+- The training loss steadily decreases, indicating effective optimization.
+- Validation accuracy closely follows training accuracy, showing minimal overfitting.
+
+---
+
+### 🧠 CNN: Learned Convolutional Filters
+
+Below are the convolutional filters learned by the second convolutional layer in the CNN. Each small grid corresponds to a filter kernel visualized as an RGB patch.
+
+![CNN Learned Filters](./Images/Learned_Features_CNN.png)
+
+- The variety of colors and patterns suggests that the model has learned diverse low-level features such as edges, color gradients, and textures.
+- These filters help capture visual cues useful for classification.
+
+---
+
+
 **Architecture**:
 ```
 conv → ReLU → maxpool → conv → ReLU → maxpool → fc → ReLU → fc → softmax
@@ -28,6 +51,15 @@ Training loop managed via `Solver` class.
 ### 🔹 2. RNN for Image Captioning
 
 Implemented in: `rnn.py`, `rnn_layers.py`, `layers.py`
+
+This figure showcases sample outputs from the RNN-based image captioning model. For each image, it shows the model-generated caption (`Sample`) and the ground-truth human-written caption (`GT`).
+
+![RNN Captioning Samples](./Images/RNN_Test_Sample.png)
+
+- Some generated captions are close to the ground truth, but `<UNK>` tokens highlight vocabulary limitations.
+- The captions demonstrate the model’s ability to associate image features with meaningful sentence structures.
+
+---
 
 **Architecture**:
 ```
